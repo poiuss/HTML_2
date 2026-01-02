@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jisoo | Cute Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fff7fb;
+      --card:#ffffff;
+      --ink:#1f2937;
+      --muted:#6b7280;
+      --line:#fde2f0;
+      --p1:#ff4da6;
+      --p2:#7c3aed;
+      --shadow: 0 18px 40px rgba(31,41,55,.10);
+      --r:22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Noto Sans KR", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(900px 500px at 15% 10%, rgba(255,77,166,.16), transparent 60%),
+        radial-gradient(700px 500px at 85% 20%, rgba(124,58,237,.14), transparent 55%),
+        linear-gradient(180deg, #fff, var(--bg));
+      min-height:100vh;
+    }
+    .wrap{max-width:980px; margin:0 auto; padding:26px 18px 60px;}
+    .top{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:14px 16px; border:1px solid var(--line); border-radius:999px;
+      background: rgba(255,255,255,.85);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-family:"Jua", sans-serif; font-size:20px;}
+    .spark{
+      width:14px; height:14px; border-radius:6px;
+      background: linear-gradient(135deg, var(--p1), var(--p2));
+      box-shadow: 0 0 0 4px rgba(255,77,166,.12);
+    }
+    .pill{
+      font-size:12px; color:var(--muted);
+      border:1px solid var(--line); padding:8px 10px; border-radius:999px;
+      background:#fff;
+      white-space:nowrap;
+    }
+
+    .hero{
+      margin-top:18px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.86);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .heroInner{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:0;
+      align-items:stretch;
+    }
+    .heroText{padding:22px 22px 24px;}
+    h1{
+      margin:0 0 8px;
+      font-family:"Jua", sans-serif;
+      font-size:44px;
+      letter-spacing:-.4px;
+      line-height:1.05;
+    }
+    .tagline{
+      margin:0 0 14px;
+      color:var(--muted);
+      font-size:15.5px;
+      line-height:1.65;
+      max-width:50ch;
+    }
+    .chips{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;}
+    .chip{
+      font-size:13px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: #fff;
+    }
+
+    .heroImg{
+      padding:18px;
+      background:
+        radial-gradient(320px 240px at 30% 20%, rgba(255,77,166,.16), transparent 65%),
+        radial-gradient(320px 240px at 80% 60%, rgba(124,58,237,.14), transparent 65%),
+        #fff;
+      border-left:1px solid var(--line);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .frame{
+      width:100%;
+      max-width:340px;
+      aspect-ratio: 4 / 3;
+      border-radius: 18px;
+      border:1px dashed rgba(255,77,166,.35);
+      background: linear-gradient(180deg, rgba(255,77,166,.06), rgba(124,58,237,.06));
+      display:flex; align-items:center; justify-content:center;
+      overflow:hidden;
+      position:relative;
+    }
+    .frame img{
+      width:100%; height:100%;
+      object-fit: cover;
+      display:block;
+    }
+    .hint{
+      position:absolute;
+      inset:auto 10px 10px 10px;
+      font-size:12px;
+      color:rgba(31,41,55,.72);
+      background: rgba(255,255,255,.78);
+      border:1px solid var(--line);
+      border-radius: 999px;
+      padding:6px 10px;
+      text-align:center;
+    }
+
+    .section{margin-top:16px;}
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+    }
+    .card{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.90);
+      border-radius: var(--r);
+      box-shadow: 0 10px 24px rgba(31,41,55,.06);
+      padding:16px;
+    }
+    .card b{display:block; font-size:15px; margin-bottom:6px;}
+    .card p{margin:0; color:var(--muted); line-height:1.6; font-size:14px;}
+
+    .footer{
+      margin-top:18px;
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .footer{
+  position: relative;
+  z-index: 999;
+}
+    .link{
+      text-decoration:none;
+      color:var(--ink);
+      border:1px solid var(--line);
+      background:#fff;
+      border-radius:999px;
+      padding:9px 12px;
+    }
+.abstract-banner{
+  width: calc(100% - 2 * var(--pad));
+  margin: 24px auto 8px;
+  height: 64px;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,182,193,0.35), transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(186,225,255,0.35), transparent 60%),
+    linear-gradient(135deg, rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+}
+
+.banner-text{
+  font-family: "Jua", sans-serif;
+  font-size: 26px;
+  letter-spacing: -0.3px;
+  font-weight: 400;
+  color: var(--ink);
+}
+
+    @media (max-width: 860px){
+      .heroInner{grid-template-columns:1fr}
+      .heroImg{border-left:none; border-top:1px solid var(--line)}
+      .grid{grid-template-columns:1fr}
+      h1{font-size:38px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand"><span class="spark"></span>Jisoo</div>
+      <div class="pill">Firebase Hosting 과제 · 자기소개 페이지</div>
+    </div>
+
+    <section class="hero">
+      <div class="heroInner">
+        <div class="heroText">
+          <h1>안녕하세요ㅎ</h1>
+          <h1>저는 1기 오지수입니다!</h1>
+          <p class="tagline">
+            심플한 구성으로 한 장짜리 소개 페이지를 만들고 있어요?<br>요것도 너무 재미있네요?<br>
+            오늘 Firebase Hosting으로 배포까지 완료가 목표입니다!
+          </p>
+
+          <div class="chips">
+            <span class="chip"># 귀여운 감성</span>
+            <span class="chip"># HTML/CSS</span>
+            <span class="chip"># Firebase</span>
+            <span class="chip"># MVP</span>
+            <span class="chip"># 성공이냐 실패냐 그것이 문제로다</span>
+          </div>
+        </div>
+
+        <div class="heroImg">
+          <div class="frame">
+            <!-- 여기에 이미지 파일 넣고 파일명만 바꾸면 됨 -->
+            <img src="images/dog2.png" alt="dog" onerror="this.style.display='none';">
+            <div class="hint">개인적으로 강아지를 너무 좋아해서 넣어봅니다~<br>아 진촤 넘무 귀여워요ㅠ!!</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <div class="card">
+          <b>🔜 소개</b>
+          <p>저는 부산에 살고있는 테토녀 + 에겐녀 확신의 쌉 T입니다..ㅎㅎ</p>
+          <p>재미있는거 좋아하고 웃긴거 좋아하고~<br> 하이튼 매사 초 긍정 스타일입니다..</p>
+          <p>시집 안갔고.. (못간거 같습니다..ㅜㅜ) 숨겨둔 애기 없습니다..!</p>
+          <p>제 사진을 올리고 싶은데..<br> 몇달전 얼굴을 크게 다치는 이슈가 있어서 생략할께요..ㅎㅎ</p>
+          <p>본의 아니게 zoom에서 매일 불편한 얼굴을 보시게해서 죄송합니다^^;;</p>
+        </div>
+<div class="card">
+  <b>🔜 요즘 하는 것</b>
+  <p>음... 연애를 좀 하고 싶은데.. 컴퓨터랑 사랑에 빠진것 같습니다...?</p>
+  <p>이것 저것 배운거 실행해 보는게 요즘 낙이네요...<br>하하하하하하하하^^ (또르륵...)</p>
+
+  <br>
+
+  <b>🔜 하고 싶은 것</b>
+  <p>로또 당첨되고 싶습니다...^ㅡ^♡</p>
+  <p>모든 부분 스킬 업그레이드하고 싶습니다 ^ㅡ^♡</p>
+</div>
+      </div>
+    </section>
+
+<div class="abstract-banner">
+  <span class="banner-text">우리 1기 교육생님들 마지막까지 무사 완주 기원합니다 :)</span>
+</div> 
+
+    <div class="footer">
+      <a class="link"
+   href="https://mail.google.com/mail/?view=cm&fs=1&to=88subini@gmail.com"
+   target="_blank" rel="noopener">
+  Email
+</a>
+      <a class="link" href="#" onclick="alert('마땅히 없어서 요건 생략합니다^^!');return false;">Portfolio</a>
+      <span class="link">© 2026 Jisoo</span>
+    </div>
+  </div>
+</body>
+</html>
